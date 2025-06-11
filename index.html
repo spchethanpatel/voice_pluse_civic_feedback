@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Feedback Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-animation">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <header>
+    <div class="logo-container">
+      <i class="fas fa-comments"></i>
+      <h1>Community<span>Voice</span></h1>
+    </div>
+    <p class="hero-subtitle">Your feedback shapes our community's future</p>
+  </header>
+
+  <main class="main-container">
+    <form id="feedback-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" required />
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">Select category</option>
+          <option value="Water Supply">Water Supply</option>
+          <option value="Roads & Infrastructure">Roads & Infrastructure</option>
+          <option value="Power Supply">Power Supply</option>
+          <option value="Community Safety">Community Safety</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Other Concerns">Other Concerns</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" rows="4" required></textarea>
+        <button type="button" class="voice-btn" onclick="startListening()">
+          <i class="fas fa-microphone"></i> Voice Input
+        </button>
+      </div>
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+      <div class="status-message" id="status-msg"></div>
+    </form>
+  </main>
+
+  <div class="popup-overlay" id="success-popup">
+    <div class="popup-content">
+      <i class="fas fa-check-circle"></i>
+      <h3>Thank You!</h3>
+      <p>Your feedback has been submitted successfully.</p>
+      <button class="popup-close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
