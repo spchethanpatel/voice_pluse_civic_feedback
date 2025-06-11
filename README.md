@@ -20,4 +20,5 @@ A simple web application for collecting and managing public feedback from citize
 
 ## 📜 License
 
-MIT License © 2025 mohammed sabeel
+MIT License © 2025 S.P Chethan Patel
+
